@@ -19,6 +19,7 @@ existing TCA.
     CreateNewExtension
     CreateNewDistribution
     ExtensionManagement
+    Configuration
     Documentation
     FrontendPlugin/Index
     BackendModule/Index

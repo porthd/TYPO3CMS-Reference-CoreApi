@@ -57,6 +57,20 @@ Extension development
             like creating a frontend plugin, a backend module or to extend
             existing TCA.
 
+
+   .. container:: col-md-6 pl-0 pr-3 py-3 m-0
+
+      .. container:: card px-0 h-100
+
+         .. rst-class:: card-header h3
+
+            .. rubric:: :ref:`Extbase <extbase>`
+
+         .. container:: card-body
+
+            Explains how to create TYPO3 extensions based on Extbase.
+
+
    .. container:: col-md-6 pl-0 pr-3 py-3 m-0
 
       .. container:: card px-0 h-100
