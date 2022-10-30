@@ -34,7 +34,7 @@ Creating a new Command in Extensions
    E.g. how to setup aliases via :file:`Services.yaml`,
    or how to use dependency injection in commands.
 
-   The following example will add a command named ``yourext:dothings``.
+   The following example will add a command named ``yourext:dothings`` to the list of command managed by the service ``console.command``.
 
    Register via DI in :file:`Configuration/Services.yaml`::
 
@@ -51,6 +51,7 @@ Creating a new Command in Extensions
          tags:
            - name: 'console.command'
              command: 'yourext:dothings'
+             description: 'describe, what `dothings` will do. It will shown in the helplist'  
 
    Or register :file:`Configuration/Commands.php`.
    Deprecated since v10 and will be removed in v11::
@@ -75,10 +76,34 @@ Creating a new Command in Extensions
    :php:`execute()`
       Contains the logic when executing the command.
 
-.. seealso::
+    .. seealso::
 
-   A detailed description and an example can be found in
-   `the Symfony Command Documentation <https://symfony.com/doc/current/console.html>`_.
+        A detailed description and an example can be found in
+        `the Symfony Command Documentation <https://symfony.com/doc/current/console.html>`_.
+
+#. Check your result in the console
+
+   The first two commands helps you to remove old cachings. The list command shows, if  your wire-definition is successful.   
+   
+.. tabs::
+
+   .. group-tab:: Composer-based installation
+
+      .. code-block:: bash
+
+         vendor/bin/typo3 cache:flush
+         vendor/bin/typo3 cache:warmup
+         vendor/bin/typo3 list
+
+
+   .. group-tab:: Legacy installation
+
+      .. code-block:: bash
+
+         typo3/sysext/core/bin/typo3 cache:flush
+         typo3/sysext/core/bin/typo3 cache:warmup
+         typo3/sysext/core/bin/typo3 list
+
 
 Command Class
 -------------
